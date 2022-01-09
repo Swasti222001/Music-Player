@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Music Player </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <div class="main">
+
+    <div class="topnav">
+      <a class="active" href="#Heading"><i class="fas fa-home fa-1x"></i></a>
+      <a href="#notes"><i class="fas fa-book-open fa-1x"></i></a>
+
+    </div>
+
+    <div class="Heading" id="Heading">
+      <h1 class="Text">Play Your Favourite Songs!!</h1>
+      <br>
+      <h1 class="Text1"> </h1>
+
+    </div>
+    <div class="main2">
+      <div id="carouselExampleControls" class="carousel slide carousel1" data-bs-ride="carousel">
+        <div class="carousel-inner w-100">
+          <div class="carousel-item active">
+            <img src="./images/images.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/images.jpg" class="d-block w-100" alt="...">
+          </div>
+          <!-- <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div> -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="wrapper1">
+
+        <div class="top-bar">
+
+          <span>Now Playing....</span>
+
+        </div>
+        <div class="img-area">
+          <img src="" alt="img">
+        </div>
+        <div class="song-details">
+          <p class="name"></p>
+          <p class="artist"></p>
+        </div>
+        <div class="progress-area">
+          <div class="progress-bar">
+            <audio id="main-audio" src=""></audio>
+          </div>
+          <div class="song-timer">
+            <span class="current-time">0:00</span>
+            <span class="max-duration">0:00</span>
+          </div>
+        </div>
+        <div class="controls">
+          <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+          <i id="prev" class="material-icons">skip_previous</i>
+          <div class="play-pause">
+            <i class="material-icons play">play_arrow</i>
+          </div>
+          <i id="next" class="material-icons">skip_next</i>
+          <i id="more-music" class="material-icons">queue_music</i>
+        </div>
+        <div class="music-list">
+          <div class="header">
+            <div class="row">
+              <i class="list material-icons">queue_music</i>
+              <span>Music list</span>
+            </div>
+            <i id="close" class="material-icons">close</i>
+          </div>
+          <!-- <ul>
+
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="Notes1" id="notes">
+    <header>
+      <div class="container2">
+        <h1>My Notes </h1>
+
+        <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>&nbsp;&nbsp;
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        <br>
+        <br>
+        <form action="">
+          <input type="text" id="note-title" placeholder="Note title">
+          <textarea id="note-text" placeholder="Note Details"></textarea>
+
+          <button id="add-btn">Add Note</button>
+        </form>
+      </div>
+    </header>
+    <br>
+    <section>
+      <div class="container2">
+        <h2 class="NOTES">Your Notes......</h2>
+        <hr>
+        <div id="notes">
+
+          <div class="note">
+            <p class="note-counter"></p>
+            <h3 class="note-title"> </h3>
+            <p class="note-text"></p>
+            <button class="note-btn">Delete Note</button>
+            <button class="note-btn edit-btn">Edit Note</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  </div>
+  <script src="https://kit.fontawesome.com/1d5367d456.js" crossorigin="anonymous"></script>
+
+  <script src="js/music-list.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <!-- <script src="js/script.js"></script>
+  <script src="js/script-1.js"></script>  -->
+
+</body>
+
+</html>

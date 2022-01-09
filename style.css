@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* display: flex; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center; */
+  /* padding-left: 3rem;
+  padding-top: 2rem;
+  min-height: 100vh;
+  background-image:url("./bgimage/bg-1.jpg") ;
+  background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.main {
+  /* display: flex; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center; */
+  padding-left: 2rem;
+  padding-top: 2rem;
+  min-height: 100vh;
+  background-image:url("./bgimage/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fas {
+  color: #e7e0e0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  /* padding-top:2px ; */
+}
+
+.Heading {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.Text {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(228, 226, 222);
+  /* The typwriter cursor */
+  white-space: nowrap;
+  
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 5s steps(30),
+    blink-caret .75s;
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite; */
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 60%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  100% {
+    border-color: rgb(58, 56, 53);
+  }
+}
+
+/* .Text1 {
+  animation: animate 4s forwards 0s;
+} */
+
+.Text1::before {
+  content: " ";
+  animation: animate infinite 5s;
+  padding-left: 10px;
+
+}
+
+@keyframes animate {
+
+  0% {
+    content: "LISTEN !";
+  }
+
+  50% {
+    content: "STUDY !";
+  }
+
+  100% {
+    content: "MAKE NOTES !";
+  }
+}
+
+.topnav {
+  background-color: rgba(2, 2, 2, 0);
+  /* overflow: hidden; */
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: flex-end;
+  align-items: flex-end; */
+
+}
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 20px;
+  font-style: oblique;
+
+}
+
+.topnav a:hover {
+  background-color: rgb(82, 29, 82);
+  color: black;
+}
+
+.topnav a.active {
+  /* background-color: #a776b6; */
+  color: white;
+}
+
+.main2 {
+  display: flex;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  padding: 3rem;
+  
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+}
+
+/* .Quotes{ */
+/* width: 40%; */
+/* height: 25rem; */
+/* background-color: #cecaca13; */
+/* border: 2px black double; */
+/* border-radius: 40px; */
+/* margin-top: 40px;
+  margin-left: 100px; */
+/* display: flex; */
+/* } */
+.carousel1 {
+  width: 40%;
+  height: max-content;
+}
+
+.wrapper1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 30%;
+  height: max-content;
+  padding: 25px 30px;
+  /* margin-right: 120px; */
+  order: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  background: rgb(244, 223, 248);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper1 i {
+  cursor: pointer;
+}
+
+.top-bar,
+.progress-area .song-timer,
+.controls,
+.music-list .header,
+.music-list ul li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar i {
+  font-size: 30px;
+  color: #515C6F;
+  ;
+}
+
+.top-bar i:first-child {
+  margin-left: -7px;
+}
+
+.top-bar span {
+  font-size: 18px;
+  margin-left: -3px;
+  color: #515C6F;
+  ;
+}
+
+.img-area {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  ;
+}
+
+.img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.song-details {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.song-details p {
+  color: #515C6F;
+}
+
+.song-details .name {
+  font-size: 21px;
+}
+
+.song-details .artist {
+  font-size: 18px;
+  opacity: 0.9;
+  line-height: 35px;
+}
+
+.progress-area {
+  height: 6px;
+  width: 100%;
+  border-radius: 50px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.progress-area .progress-bar {
+  height: inherit;
+  width: 0%;
+  position: relative;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgb(209, 198, 198) 0%, rgb(17, 13, 17) 100%);
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  top: 50%;
+  right: -5px;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  background: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.progress-area:hover .progress-bar::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.progress-area .song-timer {
+  margin-top: 2px;
+}
+
+.song-timer span {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.15);
+  ;
+}
+
+.controls {
+  margin: 40px 0 5px 0;
+}
+
+.controls i {
+  font-size: 28px;
+  user-select: none;
+  background: linear-gradient(rgb(110, 106, 107) 0%, rgb(7, 6, 7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.controls i:nth-child(2),
+.controls i:nth-child(4) {
+  font-size: 43px;
+}
+
+.controls #prev {
+  margin-right: -13px;
+}
+
+.controls #next {
+  margin-left: -13px;
+}
+
+.controls .play-pause {
+  height: 54px;
+  width: 54px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(white 0%, #cecaca 100%);
+  box-shadow: 0px 0px 5px pink;
+}
+
+.play-pause::before {
+  position: absolute;
+  content: "";
+  height: 43px;
+  width: 43px;
+  border-radius: inherit;
+  background: linear-gradient(rgb(233, 166, 178) 0%, rgb(34, 32, 34) 100%);
+}
+
+.play-pause i {
+  height: 43px;
+  width: 43px;
+  line-height: 43px;
+  text-align: center;
+  background: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+}
+
+.music-list {
+  position: absolute;
+  background: rgb(243, 140, 140);
+  width: 100%;
+  left: 0;
+  bottom: -55%;
+  opacity: 1;
+  background-color: #e3e9f3;
+  pointer-events: none;
+  z-index: 5;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.15s ease-out;
+}
+
+.music-list.show {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.header .row {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  color: rgba(14, 9, 9, 0.15);
+  ;
+}
+
+.header .row i {
+  cursor: default;
+}
+
+.header .row span {
+  margin-left: 5px;
+}
+
+.header #close {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.15);
+  ;
+}
+
+.music-list ul {
+  margin: 10px 0;
+  max-height: 260px;
+  overflow: auto;
+}
+
+.music-list ul::-webkit-scrollbar {
+  width: 0px;
+}
+
+.music-list ul li {
+  list-style: none;
+  display: flex;
+  cursor: pointer;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.15);
+  ;
+  border-bottom: 1px solid #333232;
+}
+
+.music-list ul li:last-child {
+  border-bottom: 0px;
+}
+
+.music-list ul li .row span {
+  font-size: 17px;
+}
+
+.music-list ul li .row p {
+  opacity: 0.9;
+}
+
+ul li .audio-duration {
+  font-size: 16px;
+}
+
+ul li.playing {
+  pointer-events: none;
+  color: rgb(34, 22, 34);
+}
+
+.fab {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+
+}
+
+.fa-google {
+  color: #058625;
+}
+
+.fa-youtube {
+  color: #f70c0c;
+}
+
+.p-small {
+  padding-bottom: 5px;
+}
+
+.p-medium {
+  padding-bottom: 10px;
+}
+
+.p-y {
+  padding: 10px 0;
+}
+
+.m-y {
+  margin: 10px 0;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container2 {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #d6a8d2;
+  line-height: 2;
+}
+
+header form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* width: 30rem; */
+  max-width: 50%;
+}
+.Notes1{
+  background-image: url("./bgimage/bg-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+form>* {
+  margin-bottom: 5px;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 7px;
+  border: 1px solid #777;
+  border-radius: 3px;
+}
+
+form textarea {
+  padding: 7px 0 40px 5px;
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+
+::placeholder {
+  font-size: 1rem;
+}
+
+.NOTES {
+  color: #d6a8d2;
+}
+
+form button {
+  background-color: #ee69ab;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+form button:hover {
+  background-color: #9d0191;
+}
+
+.note {
+  padding: 1rem;
+  border: 1px solid #777;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  margin: 1rem 0;
+
+}
+
+.note-counter,
+.note-text {
+  font-size: 1.2rem;
+}
+
+.note-title {
+  font-size: 1.5rem;
+  color: #030303;
+}
+
+.note-btn {
+  padding: 7px;
+  margin-top: 5px;
+  font-size: 1rem;
+  background-color: rgb(66, 9, 45);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #691162;
+  color: #f8f2f2;
+}
+@media only screen and (max-width:768px ){
+  .main2
+  {
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+  }
+  .wrapper1{
+    width: 100%;
+  }
+  .carousel1{
+    width:100%;
+    margin-bottom:2rem ;
+  }
+  header form{
+    max-width: 100%;
+  }
+.topnav
+{
+  flex-wrap: wrap;
+}
+.topnav a{
+  width: 100%;
+}
+.main{
+  padding: 1rem;
+}
+.Text,.Text1{
+  font-size: large;
+  flex-wrap: wrap;
+}
+}
